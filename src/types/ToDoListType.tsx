@@ -1,4 +1,4 @@
-export default interface ToDoListType{
+export type ToDoListType = {
     header: string;
     text: string;
     creatingDate: string;
