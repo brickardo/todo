@@ -1,6 +1,47 @@
 .ToDoCard{
     width: 250px;
     height: 300px;
-    border: 1px solid rgb(168, 168, 168);
+    border: 2px solid #183D3D;
     border-radius: 15px;
+    margin-bottom: 15px;
+    list-style-type: none;
+    color: #93B1A6;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardDeteleButton{
+    all: unset;
+    width: 50%;
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 2px solid #183D3D;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-out;
+    align-self: center;
+}
+
+.CardHeader{
+    font-size: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.CardText{
+    width: 70%;
+    height: auto;
+    margin-top: 0px;
+    margin-left: 25px;
+}
+
+.cardDeteleButton:hover{
+    border: 2px solid #225e5e;
+    box-shadow: 1px 1px 10px 0.3px rgb(34, 94, 94, 0.9);
 }
