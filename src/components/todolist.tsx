@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {ToDoListType} from "../types/ToDoListType";
 import './todoList.css'
+import {TodoCard} from './todoCard'
 
 function ToDoList(){
     const [counter, setCounter] = useState(1);
@@ -22,11 +23,7 @@ function ToDoList(){
             <div id="cardList_wrapper">
                 <ul id="cardListUl_wrapper">
                     {cards.map((card)=>(
-                        <li className="ToDoCard" key={card.id}>
-                            <h3 className="CardHeader">{card.header}</h3>
-                            <p className="CardText">{card.text}</p>
-                            <button className="cardDeteleButton" onClick={()=>DeleteCard(card.id)}>Delete me</button>
-                        </li>
+                        <TodoCard id={card.id} DeleteCard={DeleteCard}/>
                     ))}
                 </ul>
             </div>
