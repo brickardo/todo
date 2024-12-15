@@ -23,7 +23,7 @@ function ToDoList(){
             <div id="cardList_wrapper">
                 <ul id="cardListUl_wrapper">
                     {cards.map((card)=>(
-                        <TodoCard id={card.id} DeleteCard={DeleteCard}/>
+                        <TodoCard key={card.id} id={card.id} DeleteCard={DeleteCard}/>
                     ))}
                 </ul>
             </div>
