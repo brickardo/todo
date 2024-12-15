@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {ToDoListType} from "../types/ToDoListType";
+import './todoList.css'
 
 function ToDoList(){
     const [counter, setCounter] = useState(1);
@@ -15,16 +16,16 @@ function ToDoList(){
     }
     return (
         <div id="ToDo_wapper">
-            <button onClick={ToDoCardCreate}>
+            <button id="addCardButton" onClick={ToDoCardCreate}>
                 +
             </button>
-            <div>
-                <ul>
+            <div id="cardList_wrapper">
+                <ul id="cardListUl_wrapper">
                     {cards.map((card)=>(
                         <li className="ToDoCard" key={card.id}>
-                            <h3>{card.header}</h3>
-                            <p>{card.text}</p>
-                            <button onClick={()=>DeleteCard(card.id)}>Delete me</button>
+                            <h3 className="CardHeader">{card.header}</h3>
+                            <p className="CardText">{card.text}</p>
+                            <button className="cardDeteleButton" onClick={()=>DeleteCard(card.id)}>Delete me</button>
                         </li>
                     ))}
                 </ul>
